@@ -19,19 +19,27 @@ def read_file(file_path):
     """
     # 请在下方编写代码
     # 使用open()函数打开文件并读取内容
-    pass
+    with open(file_path,"r",encoding="utf-8") as file:
+        content = file.read()
+    return content
 
 def write_file(file_path, content):
     """
     写入内容到文本文件
-    
+
     参数:
     - file_path: 文件路径
     - content: 要写入的内容
-    
+
     返回:
     - 是否写入成功的布尔值
     """
-    # 请在下方编写代码
-    # 使用with语句和open()函数写入内容到文件
-    pass 
+    try:
+        # 使用 with 语句和 open() 函数写入内容到文件，自动处理文件关闭
+        with open(file_path, "w", encoding="utf-8") as file:
+            file.write(content)
+        return True
+    except Exception as e:
+        # 如果发生异常，返回 False 表示写入失败
+        return False
+
