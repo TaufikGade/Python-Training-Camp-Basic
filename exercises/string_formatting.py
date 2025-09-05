@@ -19,4 +19,4 @@ def format_student_info(name, age):
     - 格式化后的学生信息字符串
     """
     # 请在下方编写代码
-    return f"Hello,my name is {name} and I am {age} years old."
+    return f"姓名: {name} 年龄: {age} ."

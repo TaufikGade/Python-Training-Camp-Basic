@@ -29,7 +29,7 @@ def get_website_content(url):
     resp = requests.get(url)
     return {
         'status_code': resp.status_code,
-        'content': resp.content,
+        'content': resp.text,
         'headers': dict(resp.headers)
         #在 requests 里，resp.headers 的类型并不是普通的 dict，而是一个 CaseInsensitiveDict
       }
